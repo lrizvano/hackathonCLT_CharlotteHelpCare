@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#FamilyMedicine {background-color:red;}
+#WomensHealth {background-color:green;}
+#SubstanceHelp {background-color:blue;}
+#MentalHealth {background-color:orange;}
+</style>
+</head>
+<body>
+    <div style = "Background-color: #009999; height: 100px; width: 800px;">
+		<h1 style="text-align:center; padding: 40px">Charlotte Health Care</h1>
+	</div>
+
+<div id="Family Medicine" class="tabcontent">
+  <h1>Family Medicine</h1>
+  <p>Family Medicine.</p>
+</div>
+
+<div id="Womens Health" class="tabcontent">
+  <h1>Women's Health</h1>
+  <p>Women's Health.</p>
+</div>
+
+<div id="Substance Help" class="tabcontent">
+  <h1>Substance Help</h1>
+  <p>Substance Help.</p>
+</div>
+
+<div id="Mental Health" class="tabcontent">
+  <h1>Mental Health</h1>
+  <p>Mental Health.</p>
+</div>
+
+<button class="tablink" onclick="openTab('Family Medicine', this, 'red')" id="defaultOpen">Family Medicine</button>
+<button class="tablink" onclick="openTab('Womens Health', this, 'green')">Women's Health</button>
+<button class="tablink" onclick="openTab('Substance Help', this, 'blue')">Substance Help</button>
+<button class="tablink" onclick="openTab('Mental Health', this, 'orange')">Mental Health</button>
+
+<script>
+function openTab(name,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(name).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
