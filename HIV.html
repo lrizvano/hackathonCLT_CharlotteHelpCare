@@ -1,5 +1,94 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 12px;
+  text-align: center;
+}
+
+#Home {background-color:#33cccc;}
+#Obesity {background-color:#ff4d4d;}
+#Access {background-color:#00b300;}
+#HIV {background-color:#c653c6;}
+#MentalHealth {background-color:#ffb84d;}
+</style>
+</head>
+<body>
+  
+
+<div id="Home" class="tabcontent">
+    <h1>Charlotte Health Care</h1>
+</div>
+  
+<div id="Obesity" class="tabcontent">
+  <h1>Charlotte Health Care</h1>
+</div>
+
+<div id="Access" class="tabcontent">
+  <h1>Charlotte Health Care</h1>
+</div>
+
+<div id="HIV" class="tabcontent">
+  <h1>Charlotte Health Care</h1>
+</div>
+
+<div id="MentalHealth" class="tabcontent">
+  <h1>Charlotte Health Care</h1>
+</div>
+
+<button class="tablink" onclick="openTab('Home', this, '#33cccc')" ><a href = "https://vfs.cloud9.us-east-2.amazonaws.com/vfs/ef7e645097f449e8a65f7d872a4d3d3c/preview/hVckVth0n/hackathonCLT_RuntimeTerror/home.html">Home</a></button>
+<button class="tablink" onclick="openTab('Obesity', this, '#ff4d4d')" ><a href = "https://vfs.cloud9.us-east-2.amazonaws.com/vfs/ef7e645097f449e8a65f7d872a4d3d3c/preview/hVckVth0n/hackathonCLT_RuntimeTerror/obesity.html">Obesity</a></button>
+<button class="tablink" onclick="openTab('Access', this, '#00b300')"><a href = "https://vfs.cloud9.us-east-2.amazonaws.com/vfs/ef7e645097f449e8a65f7d872a4d3d3c/preview/hVckVth0n/hackathonCLT_RuntimeTerror/access.html">Access to Healthcare</a></button>
+<button class="tablink" onclick="openTab('HIV', this, '#c653c6')" id="defaultOpen"><a href = "https://vfs.cloud9.us-east-2.amazonaws.com/vfs/ef7e645097f449e8a65f7d872a4d3d3c/preview/hVckVth0n/hackathonCLT_RuntimeTerror/HIV.html">HIV</a></button>
+<button class="tablink" onclick="openTab('MentalHealth', this, '#ffb84d')"><a href = "https://vfs.cloud9.us-east-2.amazonaws.com/vfs/ef7e645097f449e8a65f7d872a4d3d3c/preview/hVckVth0n/hackathonCLT_RuntimeTerror/depression.html">Mental Health</a></button>
+
+<script>
+function openTab(name,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(name).style.display = "block";
+  elmnt.style.backgroundColor = color;
+ 
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+   
+</body>
+</html> 
+
+<html>
     <head>
         <meta charset="UTF-8">
         <title>Depression</title>
